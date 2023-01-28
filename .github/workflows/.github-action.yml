@@ -11,35 +11,35 @@ jobs:
   linting:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js 18.11
-      uses: actions/setup-node@v1
-      with:
-        node-version: 18.11
-    - name: Install dependencies
-      run: |
-        npm install --ignore-scripts
-    - name: Run Linting
-      run: |
-        npm run check-lint
-        npm run validate
+      - uses: actions/checkout@v2
+      - name: Use Node.js 18.11
+        uses: actions/setup-node@v1
+        with:
+          node-version: 18.11
+      - name: Install dependencies
+        run: |
+          npm install --ignore-scripts
+      - name: Run Linting
+        run: |
+          npm run check-lint
+          npm run validate
 
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js 18.11
-      uses: actions/setup-node@v1
-      with:
-        node-version: 18.11
-    - name: Install dependencies
-      run: |
-        npm install --ignore-scripts
-    - name: Deploy to production
-      env:
-        AWS_REGION: eu-central-1
-        STAGE: production
-      run: |
-        echo "Deploy"
-        npx sls create_domain --stage $STAGE --verbose
-        npx serverless deploy --region $AWS_REGION --stage $STAGE
+      - uses: actions/checkout@v2
+      - name: Use Node.js 18.11
+        uses: actions/setup-node@v1
+        with:
+          node-version: 18.11
+      - name: Install dependencies
+        run: |
+          npm install --ignore-scripts
+      - name: Deploy to production
+        env:
+          AWS_REGION: eu-central-1
+          STAGE: production
+        run: |
+          echo "Deploy"
+          npx sls create_domain --stage $STAGE --verbose
+          npx serverless deploy --region $AWS_REGION --stage $STAGE
