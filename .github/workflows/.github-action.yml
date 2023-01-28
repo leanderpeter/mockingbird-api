@@ -48,6 +48,7 @@ jobs:
         npm run validate
   deploy:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js 18.11
