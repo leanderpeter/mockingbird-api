@@ -8,6 +8,7 @@ provider:
   
 custom:
   customDomain:
+    apiType: http
     domainName: ${env:MOCKINGBIRD_DOMAIN}
 package:
   patterns:
