@@ -1317,6 +1317,11 @@
   "resolved" "https://registry.npmjs.org/@types/retry/-/retry-0.12.1.tgz"
   "version" "0.12.1"
 
+"@types/serverless@^3.0.1":
+  "integrity" "sha512-LHvBjSDDs3XPqS0WnaAUN5SvviScyOaSweEVozvXOdKMIa4IRZGKoMNWTVOTPekYO5ckPnq3ApeGebqVm+kmcw=="
+  "resolved" "https://registry.npmjs.org/@types/serverless/-/serverless-3.12.9.tgz"
+  "version" "3.12.9"
+
 "2-thenable@^1.0.0":
   "integrity" "sha512-HqiDzaLDFCXkcCO/SwoyhRwqYtINFHF7t9BDRq4x90TOKNAJpiqUt9X5lQ08bwxYzc067HUywDjGySpebHcUpw=="
   "resolved" "https://registry.npmjs.org/2-thenable/-/2-thenable-1.0.0.tgz"
@@ -4758,7 +4763,7 @@
     "velocityjs" "^2.0.6"
     "ws" "^8.11.0"
 
-"serverless@^3.2.0":
+"serverless@^3.10.0", "serverless@^3.2.0":
   "integrity" "sha512-drVr4akkQwm2Pj7ZN9boh5PoI2nKvlXmy+Cb8Hh1Zv8ybsf47ZUQE6t7dakGA4irYf4SQCbVc72nKqISfarMCQ=="
   "resolved" "https://registry.npmjs.org/serverless/-/serverless-3.26.0.tgz"
   "version" "3.26.0"
