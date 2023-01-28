@@ -1,0 +1,77 @@
+{
+  "uuid": "445f6e21-5269-4c2e-a4e1-ca0fe1759f60",
+  "lastMigration": 25,
+  "name": "Cars-API",
+  "endpointPrefix": "cars",
+  "latency": 0,
+  "port": 3000,
+  "hostname": "0.0.0.0",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "7f1a102d-6a14-424a-a6f4-2b147aa70916",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "deliveries",
+      "responses": [
+        {
+          "uuid": "4f692880-7b2c-4b10-a30f-effa85268a45",
+          "body": "{\n    \"data\": [\n        {\n            \"car_id\": \"{{queryParam 'car_id' 'test-car'}}\",\n            \"compound\": \"akb_kitzingen\",\n            \"delivery_date\": \"2023-01-24\",\n            \"last_updated_at\": \"2023-01-25T10:29:39.433Z\",\n            \"partner_order_id\": \"14817824\",\n            \"delivery_partner\": \"hartmann\",\n            \"status\": \"{{header 'x-request-id' (oneOf (array 'draft' 'sent' 'accepted' 'in_transit' 'completed' 'cancelled' 'delayed'))}}\",\n            \"handover_protocol_filename\": \"/hartmann-14817824/handover/20230125.pdf\",\n            \"handover_protocol_timestamp\": \"2023-01-25T10:29:39.406Z\",\n            \"distance\": 236005,\n            \"duration\": 8983\n        }\n    ],\n    \"meta\": {\n        \"total\": 1\n    }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "7f1a102d-6a14-424a-a6f4-2b147aa70916"
+    }
+  ],
+  "proxyMode": true,
+  "proxyHost": "https://stg-api-ops-cars.mocking.auto/",
+  "proxyRemovePrefix": true,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}

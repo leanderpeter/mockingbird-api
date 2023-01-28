@@ -1,0 +1,108 @@
+{
+  "uuid": "f08e09cc-eaca-4cf7-8753-0a2ebc15daa2",
+  "lastMigration": 25,
+  "name": "Data",
+  "endpointPrefix": "example",
+  "latency": 0,
+  "port": 3000,
+  "hostname": "0.0.0.0",
+  "routes": [
+    {
+      "uuid": "f7d5fad1-c3c8-42fe-acba-1d4f1dc063ab",
+      "documentation": "Hello",
+      "method": "get",
+      "endpoint": "hello",
+      "responses": [
+        {
+          "uuid": "c931ff42-9f88-43eb-a2fc-630d8ecc9791",
+          "body": "{\"hello\": true, \"env\": \"example\"}\n",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Hello",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "6c48a882-f3d6-47bc-bd9a-a924293c8667",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "cool",
+      "responses": [
+        {
+          "uuid": "527cc01e-0312-4cd7-83ac-a1350e09f4c9",
+          "body": "{\"cool\": true, \"env\": \"example\"}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "proxyMode": true,
+  "proxyHost": "https://httpbin.org",
+  "proxyRemovePrefix": true,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "f7d5fad1-c3c8-42fe-acba-1d4f1dc063ab"
+    },
+    {
+      "type": "route",
+      "uuid": "6c48a882-f3d6-47bc-bd9a-a924293c8667"
+    }
+  ],
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "folders": []
+}

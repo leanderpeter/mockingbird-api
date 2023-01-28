@@ -1,0 +1,67 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - README.md
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js 18.11
+      uses: actions/setup-node@v1
+      with:
+        node-version: 18.11
+    - name: Install dependencies
+      run: |
+        npm ci --cache .npm --prefer-offline
+    - name: Cache node_modules
+      id: cache-node-modules
+      run: |
+        mkdir -p ~/.npm
+        cp -r node_modules ~/.npm/
+    - name: Cache package-lock.json
+      uses: actions/cache@v2
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-build-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-build-
+  linting:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js 18.11
+      uses: actions/setup-node@v1
+      with:
+        node-version: 18.11
+    - name: Restore cached node_modules
+      run: |
+        cp -r ~/.npm/node_modules .
+    - name: Run Linting
+      run: |
+        npm run check-lint
+        npm run validate
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js 18.11
+      uses: actions/setup-node@v1
+      with:
+        node-version: 18.11
+    - name: Restore cached node_modules
+      run: |
+        cp -r ~/.npm/node_modules .
+    - name: Deploy to production
+      env:
+        AWS_REGION: eu-central-1
+        STAGE: production
+      run: |
+        echo "Deploy"
+        npx sls create_domain --stage $STAGE --verbose
+        npx serverless deploy --region $AWS_REGION --stage $STAGE

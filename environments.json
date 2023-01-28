@@ -1,0 +1,18 @@
+[
+  {
+    "path": "./environments/example.json",
+    "prefix": "example"
+  },
+  {
+    "path": "./environments/example2.json",
+    "prefix": "example2"
+  },
+  {
+    "path": "./environments/dumdum.json",
+    "prefix": "dumdum"
+  },
+  {
+    "path": "./environments/cars-api.json",
+    "prefix": "cars"
+  }
+]
