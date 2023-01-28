@@ -8,7 +8,7 @@ provider:
   
 custom:
   customDomain:
-    domainName: ${env:MOCKINGBIRDOON_DOMAIN}
+    domainName: ${env:MOCKINGBIRD_DOMAIN}
 package:
   patterns:
     - "!.git/**"
