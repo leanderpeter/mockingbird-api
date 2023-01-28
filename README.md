@@ -5,8 +5,8 @@ A project to run multiple [Mockoon](https://mockoon.com/) environments in a Lamb
 Currently deployed in our AWS Staging environment. You can try it using:
 
 ```bash
-curl https://e2ger0msje.execute-api.eu-central-1.amazonaws.com/example/hello
-curl https://e2ger0msje.execute-api.eu-central-1.amazonaws.com/example/get?query=one
+curl https://mockingbird.leanderpeter.de/example/hello
+curl https://mockingbird.leanderpeter.de/example/get?query=one
 ```
 
 ## Local setup
