@@ -4,16 +4,17 @@
   "type": "commonjs",
   "description": "",
   "dependencies": {
-    "@mockoon/serverless": "^0.1.0"
+    "@mockoon/serverless": "^0.1.0",
+    "ts-node": "^10.9.1"
   },
   "devDependencies": {
     "@types/serverless": "^3.0.1",
     "eslint": "^8.32.0",
     "eslint-config-prettier": "^8.6.0",
     "prettier": "^2.8.3",
+    "serverless": "^3.10.0",
     "serverless-domain-manager": "^6.2.1",
-    "serverless-offline": "^12.0.4",
-    "serverless": "^3.10.0"
+    "serverless-offline": "^12.0.4"
   },
   "scripts": {
     "lint": "npx eslint . && npx prettier --write .",
