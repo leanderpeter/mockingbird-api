@@ -50,6 +50,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: linting
+    if: github.ref == 'refs/heads/main'
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js 18.11
