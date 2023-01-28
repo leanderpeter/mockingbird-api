@@ -11,6 +11,8 @@ const serverlessConfiguration: Serverless = {
   custom: {
     customDomain: {
       domainName: "${env:MOCKINGBIRD_DOMAIN}",
+      endpointType: "regional",
+      apiType: "http",
     },
   },
   package: {
