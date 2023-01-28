@@ -37,3 +37,5 @@ const serverlessConfiguration: Serverless = {
   },
   plugins: ["serverless-domain-manager", "serverless-offline"],
 };
+
+module.exports = serverlessConfiguration;
