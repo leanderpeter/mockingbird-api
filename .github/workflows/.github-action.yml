@@ -41,6 +41,7 @@ jobs:
         env:
           AWS_REGION: eu-central-1
           STAGE: production
+          MOCKINGBIRD_DOMAIN: ${{vars.MOCKINGBIRD_DOMAIN}}
         run: |
           echo "Deploy"
           npx sls create_domain --stage $STAGE --verbose
