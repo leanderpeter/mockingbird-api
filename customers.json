@@ -1,0 +1,77 @@
+{
+  "uuid": "83a8a187-fda2-413b-aafc-2e92b728601b",
+  "lastMigration": 25,
+  "name": "Customers",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "0.0.0.0",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "428fc58e-b46d-450f-a33e-576cf8400388",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/internal/customers/:id/profile",
+      "responses": [
+        {
+          "uuid": "7db59f28-1d90-4de3-b963-82d36a098107",
+          "body": "{\n  \"data\": {\n    \"id\": \"{{urlParam 'id'}}\",\n    \"properties\": {\n      \"address\": \"{{faker 'address.city'}}\",\n      \"city\": \"{{faker 'address.city'}}\",\n      \"createdate\": \"2021-03-25T09:17:59.229Z\",\n      \"date_of_birth\": \"1992-01-11\",\n      \"driver_license_valid\": \"true\",\n      \"email\": \"{{faker 'internet.email'}}\",\n      \"firstname\": \"{{faker 'name.firstName'}}\",\n      \"hs_object_id\": \"{{urlParam 'id'}}\",\n      \"lastmodifieddate\": \"2021-07-16T12:18:42.543Z\",\n      \"lastname\": \"{{faker 'name.lastName'}}\",\n      \"mobilephone\": \"+49123456789\",\n      \"phone\": \"+49123456789\",\n      \"zip\": \"81675\",\n      \"internal_verification_decision_dl\": \"approved\",\n      \"internal_verification_decision_id\": \"approved\"\n    }\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "428fc58e-b46d-450f-a33e-576cf8400388"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}
