@@ -8,13 +8,16 @@ const serverlessConfiguration: Serverless = {
     runtime: "nodejs14.x",
     versionFunctions: false,
   },
-  custom: {
-    customDomain: {
-      domainName: "${env:MOCKINGBIRD_DOMAIN}",
-      endpointType: "regional",
-      apiType: "http",
-    },
-  },
+  //   custom: {
+  //     customDomain: {
+  //       domainName: "${env:MOCKINGBIRD_DOMAIN}",
+  //       basePath: "",
+  //       stage: "production",
+  //       createRoute53Record: true,
+  //       endpointType: "regional",
+  //       apiType: "http",
+  //     },
+  //   },
   package: {
     patterns: [
       "!.git/**",
