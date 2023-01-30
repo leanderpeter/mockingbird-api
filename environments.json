@@ -14,5 +14,9 @@
   {
     "path": "./environments/cars-api.json",
     "prefix": "cars"
+  },
+  {
+    "path": "./environments/customers.json",
+    "prefix": "customers"
   }
 ]
