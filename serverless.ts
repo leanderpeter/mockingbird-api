@@ -40,7 +40,7 @@ const serverlessConfiguration: Serverless = {
       ],
     },
   },
-  plugins: ["serverless-domain-manager", "serverless-offline"],
+  plugins: ["serverless-offline"],
   useDotenv: true,
 };
 
