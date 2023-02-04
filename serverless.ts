@@ -1,7 +1,7 @@
 import type { Serverless } from "serverless/aws";
 
 const serverlessConfiguration: Serverless = {
-  org: "hdm-stuttgart",
+  org: "hdm",
   app: "mockoon",
   service: "mockingbird",
   frameworkVersion: "3",
