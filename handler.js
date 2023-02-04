@@ -18,6 +18,7 @@ module.exports.handler = async function (event, context, callback) {
       environmentMatch = environment;
       return false;
     }
+    console.log("No environment found!!");
     return true;
   });
 
