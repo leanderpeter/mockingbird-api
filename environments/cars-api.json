@@ -42,9 +42,9 @@
       "uuid": "7f1a102d-6a14-424a-a6f4-2b147aa70916"
     }
   ],
-  "proxyMode": true,
+  "proxyMode": false,
   "proxyHost": "https://stg-api-ops-cars.mocking.auto/",
-  "proxyRemovePrefix": true,
+  "proxyRemovePrefix": false,
   "tlsOptions": {
     "enabled": false,
     "type": "CERT",

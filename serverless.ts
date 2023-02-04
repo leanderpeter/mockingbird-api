@@ -1,23 +1,15 @@
 import type { Serverless } from "serverless/aws";
 
 const serverlessConfiguration: Serverless = {
+  org: "hdm-stuttgart",
+  app: "mockoon",
   service: "mockingbird",
   frameworkVersion: "3",
   provider: {
     name: "aws",
-    runtime: "nodejs14.x",
+    runtime: "nodejs16.x",
     versionFunctions: false,
   },
-  //   custom: {
-  //     customDomain: {
-  //       domainName: "${env:MOCKINGBIRD_DOMAIN}",
-  //       basePath: "",
-  //       stage: "production",
-  //       createRoute53Record: true,
-  //       endpointType: "regional",
-  //       apiType: "http",
-  //     },
-  //   },
   package: {
     patterns: [
       "!.git/**",
